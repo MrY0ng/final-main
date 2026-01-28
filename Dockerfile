@@ -9,7 +9,7 @@ RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=1 GOOS=linux go build -o app main.go
+RUN CGO_ENABLED=1 GOOS=linux go build -o app main.go parcel.go
 
 FROM alpine:3.21
 
